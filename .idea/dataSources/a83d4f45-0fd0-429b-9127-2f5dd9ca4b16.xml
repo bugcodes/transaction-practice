@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="test@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="test">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="ca"/>
+    <schema id="4" parent="1" name="disconf"/>
+    <schema id="5" parent="1" name="information_schema"/>
+    <schema id="6" parent="1" name="mysql"/>
+    <schema id="7" parent="1" name="performance_schema"/>
+    <schema id="8" parent="1" name="publiccms"/>
+    <schema id="9" parent="1" name="qualification_management"/>
+    <schema id="10" parent="1" name="sdm"/>
+    <schema id="11" parent="1" name="sdm01"/>
+    <schema id="12" parent="1" name="yifeng"/>
+    <table id="13" parent="2" name="transaction_user"/>
+    <table id="14" parent="2" name="user"/>
+    <table id="15" parent="2" name="vote_record"/>
+    <table id="16" parent="2" name="vote_record_memory"/>
+    <routine id="17" parent="2" name="add_vote_memory">
+      <RoutineKind>procedure</RoutineKind>
+    </routine>
+    <routine id="18" parent="2" name="pro10">
+      <RoutineKind>procedure</RoutineKind>
+    </routine>
+    <routine id="19" parent="2" name="pro11">
+      <RoutineKind>procedure</RoutineKind>
+    </routine>
+    <routine id="20" parent="2" name="rand_string">
+      <RoutineKind>function</RoutineKind>
+    </routine>
+    <column id="21" parent="13" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="22" parent="13" name="name">
+      <Position>2</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="23" parent="13" name="account">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="24" parent="13" name="balance">
+      <Position>4</Position>
+      <DataType>decimal(20,3)|0</DataType>
+    </column>
+    <column id="25" parent="13" name="update_time">
+      <Position>5</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="26" parent="13" name="create_time">
+      <Position>6</Position>
+      <Comment>CURRENT_TIMESTAMP</Comment>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="27" parent="13" name="status">
+      <Position>7</Position>
+      <DataType>tinyint(1)|0</DataType>
+    </column>
+    <key id="28" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="29" parent="14" name="username_">
+      <Position>1</Position>
+      <DataType>bigint(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="30" parent="14" name="id_">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="31" parent="14" name="password_">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="32" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>username_</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="33" parent="15" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="34" parent="15" name="user_id">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="35" parent="15" name="vote_id">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="36" parent="15" name="group_id">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="37" parent="15" name="create_time">
+      <Position>5</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="38" parent="15" name="index_user_id">
+      <ColNames>user_id</ColNames>
+    </index>
+    <key id="39" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="40" parent="16" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="41" parent="16" name="user_id">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="42" parent="16" name="vote_id">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="43" parent="16" name="group_id">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="44" parent="16" name="create_time">
+      <Position>5</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="45" parent="16" name="index_id">
+      <ColNames>user_id</ColNames>
+    </index>
+    <key id="46" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <argument id="47" parent="17" name="n">
+      <DataType>int(11)|0</DataType>
+    </argument>
+    <argument id="48" parent="19" name="n">
+      <DataType>int(11)|0</DataType>
+    </argument>
+    <argument id="49" parent="20">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>varchar(255)|0</DataType>
+    </argument>
+    <argument id="50" parent="20" name="n">
+      <DataType>int(11)|0</DataType>
+    </argument>
+  </database-model>
+</dataSource>

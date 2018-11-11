@@ -1,0 +1,43 @@
+
+
+buildscript {
+    ext {
+        springBootVersion = '1.5.9.RELEASE'
+        mavenPublicURL = "http://maven.aliyun.com/nexus/content/groups/public/"
+    }
+    repositories {
+        maven { url mavenPublicURL}
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+
+
+ext {
+    mavenPublicURL = "http://maven.aliyun.com/nexus/content/groups/public/"
+}
+
+repositories {
+    maven { url mavenPublicURL }
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile	"org.springframework.boot:spring-boot-starter-data-jpa"
+    runtime('org.springframework.boot:spring-boot-devtools') {
+        exclude group: 'org.apache.tomcat', module: 'tomcat-jdbc'
+    }
+    compile group: 'org.hibernate', name: 'hibernate-validator', version: '5.2.4.Final'
+    compile "mysql:mysql-connector-java:6.0.5"
+    compile "com.zaxxer:HikariCP:2.6.0"
+    testCompile "org.springframework.boot:spring-boot-starter-test:${springBootVersion}"
+}

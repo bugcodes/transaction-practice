@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/transaction-practice.iml" filepath="$PROJECT_DIR$/.idea/modules/transaction-practice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/transaction-practice_main.iml" filepath="$PROJECT_DIR$/.idea/modules/transaction-practice_main.iml" group="transaction-practice" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/transaction-practice_test.iml" filepath="$PROJECT_DIR$/.idea/modules/transaction-practice_test.iml" group="transaction-practice" />
+    </modules>
+  </component>
+</project>
