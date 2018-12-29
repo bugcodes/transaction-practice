@@ -36,6 +36,11 @@ public class TransferServiceTest extends AbstractTest{
 
     @Test
     public void testRequired(){
-        accountsService.transfer("peppa","george");
+        accountsService.transfer("peppa","george1");
+    }
+
+    @Test
+    public void testSupport(){
+
     }
 }

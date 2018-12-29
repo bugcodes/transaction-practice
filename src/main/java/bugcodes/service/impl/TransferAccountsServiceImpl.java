@@ -1,6 +1,5 @@
 package bugcodes.service.impl;
 
-import bugcodes.exception.BusinessException;
 import bugcodes.service.BalanceService;
 import bugcodes.service.TransferAccountsService;
 import org.slf4j.Logger;
@@ -31,9 +30,9 @@ public class TransferAccountsServiceImpl implements TransferAccountsService{
     @Override
     @Transactional(propagation = Propagation.REQUIRED,rollbackFor = Exception.class)
     public void transfer(String oName, String dName) {
-        if (true){
-            throw new BusinessException("000002","throw exception");
-        }
+//        if (true){
+//            throw new BusinessException("000002","throw exception");
+//        }
         balanceService.withdrawal(oName,new BigDecimal(10000));
         balanceService.deposit(dName,new BigDecimal(10000));
     }

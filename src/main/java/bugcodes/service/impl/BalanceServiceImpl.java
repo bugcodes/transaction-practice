@@ -28,7 +28,7 @@ public class BalanceServiceImpl implements BalanceService{
     private UserJpaRepository jpaRepository;
 
     @Override
-    @Transactional(propagation = Propagation.REQUIRED,rollbackFor = Exception.class)
+    @Transactional(propagation = Propagation.NOT_SUPPORTED,rollbackFor = Exception.class)
     public void withdrawal(String name, BigDecimal usd) {
         LOGGER.info("{} 账号开始扣钱 {}",name,usd);
         TransactionUserEntity entity = get(name);
@@ -47,7 +47,7 @@ public class BalanceServiceImpl implements BalanceService{
     }
 
     @Override
-    @Transactional(propagation = Propagation.REQUIRED,rollbackFor = Exception.class)
+    @Transactional(propagation = Propagation.NOT_SUPPORTED,rollbackFor = Exception.class)
     public void deposit(String name, BigDecimal usd) {
         LOGGER.info("{} 账号开始加钱 {}",name,usd);
         TransactionUserEntity entity = get(name);
@@ -62,7 +62,7 @@ public class BalanceServiceImpl implements BalanceService{
     }
 
     @Override
-    @Transactional(propagation = Propagation.MANDATORY,rollbackFor = Exception.class)
+    @Transactional(propagation = Propagation.NOT_SUPPORTED,rollbackFor = Exception.class)
     public boolean check(BigDecimal oUsd, BigDecimal dUsd) {
         return oUsd.compareTo(dUsd) > -1;
     }

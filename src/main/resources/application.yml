@@ -10,7 +10,7 @@ spring:
      username: ${DATASOURCE_USERNAME:transaction}
      password: ${DATASOURCE_PASSWORD:123qwe_+}
   jpa:
-    show-sql: true
+    show-sql: false
     hibernate:
       ddl-auto: update
     properties:
